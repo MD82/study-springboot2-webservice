@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
+    <script src="https://unpkg.com/vue"></script>
 </head>
+<script>
+    window.onload = function() {
+        var test1View = new Vue({
+            el : '#test1',
+            data : {
+                message : '첫번째 Vue.js 애플리게이션'
+            }
+        })
+    }
+</script>
 <body>
-    <h1>Hello HTML</h1>
+    <div id="test1">
+        <h1>{{message}}</h1>
+    </div>
 </body>
 </html>
