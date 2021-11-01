@@ -9,7 +9,7 @@
     window.onload = function () {
         let vue = new Vue({
             // Vue 객체가 관리할 요소들이 만들어지기 전에 호출되는 함수
-            el : "#test1",
+            //el : "#test1",
             data : {
                 str1 : '문자열1',
                 int1 : 100,
@@ -35,12 +35,25 @@
             updated : function () {
                 console.log('관리하고 있는 HTML요소 내부가 변경된 후입니다')
             },
+            beforeDestroy : function (){
+                console.log('Vue 객체의 기능이 소멸되기 전입니다.')
+            },
+            destroyed : function (){
+                console.log('Vue 객체의 기능이 소멸된 후 입니다.')
+            },
             methods : {
                 setValue : function () {
                     this.int1 = 200;
                 }
             }
         })
+
+        vue.$mount('#test1')
+        // Vue 객체에 마운트 된 태그를 관리하는 요소를 소멸시킨다.
+        vue.$destroy()
+
+        // 소멸된 Vue 객체에 태그를 할당한다.
+        vue.$mount('#test1')
     }
 </script>
 <body>
