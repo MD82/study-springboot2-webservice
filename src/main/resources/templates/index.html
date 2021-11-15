@@ -18,6 +18,8 @@
                 input6 : false,
                 input7 : true,
                 input8 : false,
+                input9 : "r2",
+                input10 : "item2",
             },
         })
     }
@@ -47,6 +49,21 @@
         <h3>input6 : {{input6}}</h3>
         <h3>input7 : {{input7}}</h3>
         <h3>input8 : {{input8}}</h3>
+        <hr/>
+        <input type="radio" v-model="input9" value="r1">라디오 1<br/>
+        <input type="radio" v-model="input9" value="r2">라디오 2<br/>
+        <input type="radio" v-model="input9" value="r3">라디오 3<br/>
+        <h3>input9 : {{input9}}</h3>
+        <hr/>
+        <h3>select</h3>
+        <select v-model="input10">
+            <option value="item1">항목1</option>
+            <option value="item2">항목2</option>
+            <option value="item3">항목3</option>
+            <option value="item4">항목4</option>
+            <option value="item5">항목5</option>
+        </select>
+        <h3>input10 : {{input10}}</h3>
     </div>
 </body>
 </html>
