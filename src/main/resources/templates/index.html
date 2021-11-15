@@ -20,7 +20,15 @@
                 input8 : false,
                 input9 : "r2",
                 input10 : "item2",
+                input11 : "",
+                input12 : "",
+                input13 : "",
             },
+            methods : {
+                checkType : function() {
+                    alert(typeof(this.input12));
+                }
+            }
         })
     }
 </script>
@@ -64,6 +72,17 @@
             <option value="item5">항목5</option>
         </select>
         <h3>input10 : {{input10}}</h3>
+
+        <hr/>
+        <input type="text" v-model.lazy="input11"/><br/> <!-- lazy : 다른 곳으로 이동할 때 반영 -->
+        <h3>input11 : {{input11}}</h3>
+
+        <input type="text" v-model.number="input12"/><br/> <!-- number : 숫자만 number로 하고, 나머지는 string으로 반영됨 -->
+        <h3>input12 : {{input12}}</h3>
+        <button type="button" v-on:click="checkType">타입 체크</button>
+        <br>
+        <input type="text" v-model.trim="input13"/><br/><!-- trim : 공백제거 -->
+        <pre>input13 : [{{input13}}]</pre>
     </div>
 </body>
 </html>
