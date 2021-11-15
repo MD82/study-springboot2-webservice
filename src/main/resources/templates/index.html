@@ -11,6 +11,7 @@
             el : "#test1",
             data : {
                 input1 : '안녕하세요',
+                input2 : '안녕하세요',
             },
         })
     }
@@ -20,6 +21,10 @@
         <h3>Input Type Text</h3>
         <input type="text" v-model="input1"/><br/>
         <h3>input : {{input1}}</h3>
+        <hr/>
+        <h3>Text Area</h3>
+        <textarea v-model="input2"></textarea><br/>
+        <pre>input : {{input2}}</pre>
     </div>
 </body>
 </html>
