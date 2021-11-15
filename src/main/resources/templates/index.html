@@ -10,8 +10,14 @@
         let vue = new Vue({
             el : "#test1",
             data : {
-                input1 : '안녕하세요',
-                input2 : '안녕하세요',
+                input1 : '',
+                input2 : '',
+                input3 : false,
+                input4 : true,
+                input5 : false,
+                input6 : false,
+                input7 : true,
+                input8 : false,
             },
         })
     }
@@ -25,6 +31,22 @@
         <h3>Text Area</h3>
         <textarea v-model="input2"></textarea><br/>
         <pre>input : {{input2}}</pre>
+        <hr/>
+        <h3>CheckBox</h3>
+        <input type="checkbox" v-model="input3">체크박스1<br/>
+        <input type="checkbox" v-model="input4">체크박스2<br/>
+        <input type="checkbox" v-model="input5">체크박스3<br/>
+        <h3>input : {{input3}}</h3>
+        <h3>input : {{input4}}</h3>
+        <h3>input : {{input5}}</h3>
+
+        <h3>CheckBox Value</h3>
+        <input type="checkbox" v-model="input6" value="100">체크박스 100<br/>
+        <input type="checkbox" v-model="input7" value="200">체크박스 200<br/>
+        <input type="checkbox" v-model="input8" value="300">체크박스 300<br/>
+        <h3>input6 : {{input6}}</h3>
+        <h3>input7 : {{input7}}</h3>
+        <h3>input8 : {{input8}}</h3>
     </div>
 </body>
 </html>
